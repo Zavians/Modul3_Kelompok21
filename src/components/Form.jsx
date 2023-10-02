@@ -7,6 +7,13 @@ function Form(props) {
     const [namaIsValid, setNamaIsValid] = useState(null);
     const [kelompokIsValid, setKelompokIsValid] = useState(null);
     const [formIsValid, setFormIsValid] = useState(false);
+    const [praktikans, setPraktikans] = useState([]);
+
+  const addPraktikanHandler = (praktikanData) => {
+    setPraktikans((prevPraktikans) => {
+      return [...prevPraktikans, praktikanData];
+    });
+  };
 
     const submitHandler = (event) => {
         event.preventDefault();
